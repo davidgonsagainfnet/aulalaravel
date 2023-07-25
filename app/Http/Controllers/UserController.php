@@ -41,4 +41,9 @@ class UserController extends Controller
         DB::insert('insert into usuarios_david (nome, email, senha) values (?, ?, ?)', [$request->nome,$request->email,$senha]);
         return redirect()->route('home');
     }
+
+    function deleteusuario($id){
+        DB::delete('delete from usuarios_david where id = ?', [$id]);
+        return redirect()->route('home')->with('success', 'Usuario apagado graças a Deus');
+    }
 }
