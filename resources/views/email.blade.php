@@ -1,1 +1,1 @@
-Um novo login foi feito 
+Um novo login foi feito {{Auth::user()->nome}}
